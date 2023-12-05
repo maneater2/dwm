@@ -70,6 +70,10 @@ static const char *termcmd[]  = { "urxvt", NULL };
 #include "movestack.c"
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ MODKEY|ShiftMask,             XK_BackSpace, spawn,       {.v = (const char*[]){ "sysstate", NULL } } },
+        { MODKEY,                       XK_grave,  spawn,          {.v = (const char*[]){ "dmenuunicode", NULL } } },
+        { MODKEY,                       XK_e,      spawn,          {.v = (const char*[]){ "pcmanfm", NULL } } },
+        { MODKEY|ControlMask,           XK_f,      spawn,          {.v = (const char*[]){ "firefox", NULL } } },
 	{ MODKEY,                       XK_s,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
