@@ -10,13 +10,13 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh            = 20;       /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const char *fonts[]          = { "Gohu GohuFont:size=8" };
 static const char dmenufont[]       = "Gohu GohuFont:size=8";
-static const char col_bg[]          = "#0a0c11";
-static const char col_fg[]          = "#d0d7ff";
-static const char col_cn[]          = "#19d164";
+static const char col_bg[]          = "#fff8ee";
+static const char col_fg[]          = "#1f1405";
+static const char col_or[]          = "#fc975e";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_fg, col_bg, col_cn  },
-	[SchemeSel]  = { col_cn, col_bg, col_cn  },
+	[SchemeSel]  = { col_or, col_bg, col_cn  },
 };
 
 /* tagging */
@@ -64,7 +64,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-p", ">>>", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg, "-nf", col_fg, "-sb", col_bg, "-sf", col_cn, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-p", ">>>", "-m", dmenumon, "-fn", dmenufont, "-nb", col_bg, "-nf", col_fg, "-sb", col_bg, "-sf", col_or, NULL };
 static const char *termcmd[]  = { "urxvt", NULL };
 
 #include "movestack.c"
