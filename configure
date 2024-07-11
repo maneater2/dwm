@@ -1,0 +1,10 @@
+#!/bin/sh
+
+OS=$(uname)
+
+case $OS in
+	Linux) cp -f mkconfig/config.mk.linux config.mk ;;
+	OpenBSD) cp -f mkconfig/config.mk.openbsd config.mk ;;
+	FreeBSD) cp -f mkconfig/config.mk.freebsd config.mk ;;
+	Solaris) cp -f mkconfig/config.mk.solaris config.mk ;;
+esac
