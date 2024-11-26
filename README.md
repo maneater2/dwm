@@ -12,6 +12,7 @@ dwm with a few patches added to it:
 - Window swallowing
 - Vanity gaps
 - Attach bottom
+- Always center
 
 ## Install
 
